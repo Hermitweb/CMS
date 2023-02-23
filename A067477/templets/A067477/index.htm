@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-wi  dth, initial-scale=1.0">
+    <title>中国共产党百年理论网</title>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/home.css">
+    <!-- 头脚 -->
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/header.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/footer.css">
+    <!-- swiper -->
+    <script src="{dede:global.cfg_templets_skin/}/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/swiper.min.css">
+    <!-- jq -->
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/header.js"></script>
+    <link rel="shortcut icon" href="{dede:global.cfg_templets_skin/}/images/i/favicon.ico" />
+</head>
+
+<body>
+    <!-- 头部 -->
+    <!-- <div class="header">
+        <div class="title-flex">
+            <div class="title">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"> <img src="{dede:global.cfg_templets_skin/}/images/title.png" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="{dede:global.cfg_templets_skin/}/images/title2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="title-search">
+                <input type="text" placeholder="搜索"> <img src="{dede:global.cfg_templets_skin/}/images/search.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li> <a href="{dede:global.cfg_indexurl/}" class=" nav-active">首页</a> </li>
+                {dede:channel type='top' }
+                <li> <a href="[field:typelink/]">[field:typename/]</a> </li>
+                {/dede:channel}
+            </ul>
+        </div>
+
+    </div> -->
+    {dede:include filename="head.htm"/}
+    <!-- 身体 -->
+    <div class="main">
+        <div class="main-topariticle">
+            {dede:arclist idlist='67' titlelen='200'}
+            <a href="[field:arcurl/]">
+                <h1> [field:title/] </h1>
+                <p>[field:description function="cn_substr(@me,100")/]...</p>
+            </a>
+            {/dede:arclist}
+        </div>
+        <div class="main-study">
+            <ul>
+                <li>
+                    <h4>学习路上</h4>
+                    <ol>
+                        {dede:arclist typeid='7' row='3' orderby ='rand' titlelen='50'}
+                        <li> <a href="[field:arcurl/]">[field:title/]...</a> <span>[field:pubdate
+                                function='strftime("%m-%d",@me)'/]</span> </li>
+                        {/dede:arclist}
+                    </ol>
+                </li>
+                <li>
+                    <h4>权威解读</h4>
+                    <ol>
+                        {dede:arclist typeid='8' row='3' orderby ='rand' titlelen='50'}
+                        <li> <a href="[field:arcurl/]">[field:title/]...</a> <span>[field:pubdate
+                                function='strftime("%m-%d",@me)'/]</span> </li>
+                        {/dede:arclist}
+                    </ol>
+                </li>
+                <li>
+                    <h4>观察落实</h4>
+                    <ol>
+                        {dede:arclist typeid='9' row='3' orderby ='rand' titlelen='50'}
+                        <li> <a href="[field:arcurl/]">[field:title/]...</a> <span>[field:pubdate
+                                function='strftime("%m-%d",@me)'/]</span> </li>
+                        {/dede:arclist}
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div class="main-p1">
+            <div class="p1-left">
+                <div class="tuijian-flex">
+                    <div class="tuijian">
+                        <div class="swiper-wrapper">
+
+
+                            {dede:arclist row='4 ' flag ='f' orderby ='rand'}
+                            <div class="swiper-slide">
+                                <a href="[field:arcurl/]"> <img src="[field:picname/]" alt=""> </a>
+                                <h4>[field:title/]</h4>
+                            </div>
+                            {/dede:arclist}
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev swiper-button-white"></div>
+                        <div class="swiper-button-next swiper-button-white"></div>
+                    </div>
+                </div>
+                <div class="tuijian-text">
+                    <img src="{dede:global.cfg_templets_skin/}/images/tuijian.png" alt="">
+                    <p> <a href="#"> 习近平同志《论中国共产党历史》有声书 </a> </p>
+                </div>
+            </div>
+            <div class="p1-right">
+
+                <div class="szyw list ">
+                    <div>
+                        {dede:type typeid='2'}
+                        <h2>[field:typename /]</h2> <a href="[field:typelink /]">更多 ></a>
+                        {/dede:type}
+                    </div>
+                    <ul>
+                        {dede:arclist typeid='2' row='6' orderby ='rand' }
+                        <li> <a href="[field:arcurl/]">[field:fulltitle/]</a> </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="dddt list ">
+                    <div>
+                        {dede:type typeid='3'}
+                        <h2>[field:typename /]</h2> <a href="[field:typelink /]">更多 ></a>
+                        {/dede:type}
+                    </div>
+                    <ul>
+                        {dede:arclist typeid='3' row='6'orderby ='rand' }
+                        <li> <a href="[field:arcurl/]">[field:fulltitle/]</a> </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="main-banner1">
+            <a href="#"></a>
+        </div>
+        <div class="main-p2">
+
+<!-- 9-4 -->
+            <div class="p2-list">
+                <div class="list-title">
+                    <img src="{dede:global.cfg_templets_skin/}/images/qiushi.png" alt="">
+                    {dede:type typeid='9' orderby ='rand' }
+                    <h2> <a href="[field:typelink /]"> [field:typename /]</a> </h2>
+                    {/dede:type}
+                    <div class='list-line'></div>
+                </div>
+                <div class="list-flex">
+                    <div class="list-headarticle">
+                        {dede:arclist row='1' typeid='9' orderby ='rand'}
+                        <a href="[field:arcurl/]" class="head1">
+                            <img src="[field:picname/]" alt="">
+                            <p> [field:fulltitle/]</p>
+                        </a>
+                        {/dede:arclist}
+                    </div>
+                    <ul>
+                        {dede:arclist row='3 ' typeid='9' orderby ='rand'}
+                        <li> <a href="[field:arcurl/]"> [field:title/] <span>[field:pubdate function="MyDate('m-d',@me)"/]</span></a> </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="p2-list">
+                <div class="list-title">
+                    <img src="{dede:global.cfg_templets_skin/}/images/qiushi.png" alt="">
+                    {dede:type typeid='8'}
+                    <h2> <a href="[field:typelink /]"> [field:typename /]</a> </h2>
+                    {/dede:type}
+                    <div class='list-line'></div>
+                </div>
+                <div class="list-flex">
+                    <div class="list-headarticle">
+                        <ul class="head2">
+                            {dede:arclist row='2' typeid='8' infolen='20' orderby ='rand'}
+                            <li>
+                                <a href="[field:arcurl/]">
+                                    <div class="img-box">
+                                        <img src="[field:picname/]" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <h3>[field:title/]</h3>
+                                        <p> [field:info /]</p>
+                                        <span>[field:pubdate function='strftime("%m-%d",@me)'/]</span>
+                                    </div>
+                                </a>
+                            </li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                    <ul>
+                        {dede:arclist row='3 ' typeid='8' orderby ='rand'}
+                        <li> <a href="[field:arcurl/]"> [field:title/] <span>[field:pubdate function="MyDate('m-d',@me)"/]</span></a> </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="p2-list">
+                <div class="list-title">
+                    <img src="{dede:global.cfg_templets_skin/}/images/qiushi.png" alt="">
+                    {dede:type typeid='7' orderby ='rand' }
+                    <h2> <a href="[field:typelink /]"> [field:typename /]</a> </h2>
+                    {/dede:type}
+                    <div class='list-line'></div>
+                </div>
+                <div class="list-flex">
+                    <div class="list-headarticle">
+                        {dede:arclist row='1' typeid='7' orderby ='rand'}
+                        <a href="[field:arcurl/]" class="head1">
+                            <img src="[field:picname/]" alt="">
+                            <p> [field:fulltitle/]</p>
+                        </a>
+                        {/dede:arclist}
+                    </div>
+                    <ul>
+                        {dede:arclist row='3 ' typeid='7' orderby ='rand'}
+                        <li> <a href="[field:arcurl/]"> [field:title/] <span>[field:pubdate function="MyDate('m-d',@me)"/]</span></a> </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="p2-list">
+                <div class="list-title">
+                    <img src="{dede:global.cfg_templets_skin/}/images/qiushi.png" alt="">
+                    {dede:type typeid='6'}
+                    <h2> <a href="[field:typelink /]"> [field:typename /]</a> </h2>
+                    {/dede:type}
+                    <div class='list-line'></div>
+                </div>
+                <div class="list-flex">
+                    <div class="list-headarticle">
+                        <ul class="head2">
+                            {dede:arclist row='2' typeid='6' infolen='20' orderby ='rand'}
+                            <li>
+                                <a href="[field:arcurl/]">
+                                    <div class="img-box">
+                                        <img src="[field:picname/]" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <h3>[field:title/]</h3>
+                                        <p> [field:info /]</p>
+                                        <span>[field:pubdate function='strftime("%m-%d",@me)'/]</span>
+                                    </div>
+                                </a>
+                            </li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                    <ul>
+                        {dede:arclist row='3 ' typeid='6' orderby ='rand'}
+                        <li> <a href="[field:arcurl/]"> [field:title/] <span>[field:pubdate function="MyDate('m-d',@me)"/]</span></a> </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="p2-list">
+                <div class="list-title">
+                    <img src="{dede:global.cfg_templets_skin/}/images/qiushi.png" alt="">
+                    {dede:type typeid='5' orderby ='rand' }
+                    <h2> <a href="[field:typelink /]"> [field:typename /]</a> </h2>
+                    {/dede:type}
+                    <div class='list-line'></div>
+                </div>
+                <div class="list-flex">
+                    <div class="list-headarticle">
+                        {dede:arclist row='1' typeid='5' orderby ='rand'}
+                        <a href="[field:arcurl/]" class="head1">
+                            <img src="[field:picname/]" alt="">
+                            <p> [field:fulltitle/]</p>
+                        </a>
+                        {/dede:arclist}
+                    </div>
+                    <ul>
+                        {dede:arclist row='3 ' typeid='5' orderby ='rand'}
+                        <li> <a href="[field:arcurl/]"> [field:title/] <span>[field:pubdate function="MyDate('m-d',@me)"/]</span></a> </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="p2-list">
+                <div class="list-title">
+                    <img src="{dede:global.cfg_templets_skin/}/images/qiushi.png" alt="">
+                    {dede:type typeid='4'}
+                    <h2> <a href="[field:typelink /]"> [field:typename /]</a> </h2>
+                    {/dede:type}
+                    <div class='list-line'></div>
+                </div>
+                <div class="list-flex">
+                    <div class="list-headarticle">
+                        <ul class="head2">
+                            {dede:arclist row='2' typeid='4' infolen='20' orderby ='rand'}
+                            <li>
+                                <a href="[field:arcurl/]">
+                                    <div class="img-box">
+                                        <img src="[field:picname/]" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <h3>[field:title/]</h3>
+                                        <p> [field:info /]</p>
+                                        <span>[field:pubdate function='strftime("%m-%d",@me)'/]</span>
+                                    </div>
+                                </a>
+                            </li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                    <ul>
+                        {dede:arclist row='3 ' typeid='4' orderby ='rand'}
+                        <li> <a href="[field:arcurl/]"> [field:title/] <span>[field:pubdate function="MyDate('m-d',@me)"/]</span></a> </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="main-banner2">
+            <img src="{dede:global.cfg_templets_skin/}/images/banner2-1.jpg" alt="">
+            <img src="{dede:global.cfg_templets_skin/}/images/banner2-2.jpg" alt="">
+        </div>
+        <div class="main-line"></div>
+
+        <div class="main-video">
+            <div class="main-title">
+                <div class="title-line"></div>
+                <h1>影像记录</h1>
+                <div class="title-line"></div>
+            </div>
+            <div class="video-list">
+
+                {dede:arclist row='8 ' typeid='10' orderby ='rand'}
+                <div class="video-item">
+                    <a href="[field:arcurl/]">
+                        <img src="[field:picname/]" alt="">
+                        <div class="info">
+                            <p>[field:title/]</p>
+                            <img src="/A067477/templets/a067477/images/play.png" alt="">
+                        </div>
+                        <div class="mask">
+                            <img src="/A067477/templets/a067477/images/play2.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                {/dede:arclist}
+
+            </div>
+        </div>
+
+        <div class="main-line"></div>
+        <div class="main-media">
+            <div class="main-title">
+                <div class="title-line"></div>
+                <h1>中央党史和文献新媒体矩阵</h1>
+                <div class="title-line"></div>
+            </div>
+            <div class="media-list">
+                <div class="media">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="{dede:global.cfg_templets_skin/}/images/media1.png" alt="">
+                                <p>党史网微博</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="{dede:global.cfg_templets_skin/}/images/media2.png" alt="">
+                                <p>党史网微博</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="{dede:global.cfg_templets_skin/}/images/media3.png" alt="">
+                                <p>党史网微博</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="{dede:global.cfg_templets_skin/}/images/media4.png" alt="">
+                                <p>党史网微博</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="{dede:global.cfg_templets_skin/}/images/media5.png" alt="">
+                                <p>党史网微博</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="{dede:global.cfg_templets_skin/}/images/media6.png" alt="">
+                                <p>党史网微博</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="{dede:global.cfg_templets_skin/}/images/media7.png" alt="">
+                                <p>党史网微博</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="{dede:global.cfg_templets_skin/}/images/media8.png" alt="">
+                                <p>党史网微博</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="{dede:global.cfg_templets_skin/}/images/media9.png" alt="">
+                                <p>党史网微博</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-line"></div>
+        </div>
+        </div>
+        <!-- <div class="footer">
+            <div class="footer-container">
+                <h2>友情链接</h2>
+                <div class="footer-line"></div>
+                <div class="footer-link">
+                    <span>人民网</span>
+                    <span>新华网</span>
+                    <span>央视网</span>
+                    <span>光明网</span>
+                    <span>中国经济网</span>
+                    <span>中国日报网</span>
+                    <span>中国新闻网</span>
+                    <span>中国网</span>
+                    <span>中国青年网</span>
+                    <span>中国军网</span>
+                    <span>网信网</span>
+                    <span>共产党员网</span>
+                    <span>中国文明网</span>
+                    <span>中国政府网</span>
+                    <span>全国人大</span>
+                    <span>中国政府网</span>
+                    <span>人民网</span>
+                    <span>新华网</span>
+                    <span>央视网</span>
+                    <span>光明网</span>
+                    <span>中国文明网</span>
+                    <span>中国政府网</span>
+                    <span>全国人大</span>
+                    <span>中国政府网</span>
+                    <span>人民网</span>
+                    <span>新华网</span>
+
+                </div>
+                <div class="footer-line"></div>
+                <div class="footer-link2">
+                    <div class="link2-item wb">
+                        <div class="tu  ">
+                            <img src="{dede:global.cfg_templets_skin/}/images/wb.png" alt="">
+                        </div>
+                        <p>关注微博</p>
+                    </div>
+                    <div class="link2-item wx ">
+                        <div class="tu  ">
+                            <img src="{dede:global.cfg_templets_skin/}/images/wx.png" alt="">
+                        </div>
+                        <p>关注微信</p>
+                    </div>
+                    <div class="link2-item">
+                        <div class="tu">
+                            <img src="{dede:global.cfg_templets_skin/}/images/link3.png" alt="">
+                        </div>
+                        <p>学而时习</p>
+                    </div>
+                    <div class="link2-item">
+                        <div class="tu">
+                            <img src="{dede:global.cfg_templets_skin/}/images/link4.png" alt="">
+                        </div>
+                        <p>文稿微博</p>
+                    </div>
+                    <div class="link2-item">
+                        <div class="tu">
+                            <img src="{dede:global.cfg_templets_skin/}/images/link5.png" alt="">
+                        </div>
+                        <p>文稿微信</p>
+                    </div>
+                    <div class="link2-item">
+                        <div class="tu">
+                            <img src="{dede:global.cfg_templets_skin/}/images/link6.png" alt="">
+                        </div>
+                        <p>在线订阅</p>
+                    </div>
+                </div>
+                <div class="footer-line"></div>
+                <div class="footer-beian">
+                    <p> 本站所刊登的求是杂志社及求是网各种新闻﹑信息和各种专题专栏资料，均为求是网版权所有，未经协议授权禁止下载使用。</p>
+                    <p>互联网新闻信息服务许可证10120170059 | 信息网络传播视听节目许可证0118669 | 违法和不良信息举报电话：（010）64037138 | </p>
+                    <p> 京ICP备14041882号-1|京公网安备11010102001859号</p>
+                </div>
+            </div>
+        </div> -->
+        {dede:include filename="footer.htm"/}
+</body>
+
+</html>
+<script>
+    var title = new Swiper('.title', {
+        autoplay: {
+
+            delay: 1500, //1秒切换一次
+            disableOnInteraction: false,
+        },
+        direction: 'vertical',
+        loop: true,
+    })
+    var tuijian = new Swiper('.tuijian', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        autoplay: {
+            delay: 1500, //1秒切换一次
+            disableOnInteraction: false,
+        },
+        effect: 'cube',
+        cubeEffect: {
+            slideShadows: false,
+            shadow: false,
+        },
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    })
+    var media = new Swiper('.media', {
+        autoplay: {
+            delay: 1000, //1秒切换一次
+            disableOnInteraction: false,
+        },
+        slidesPerView: 9,
+        loop: true,
+    })
+</script>

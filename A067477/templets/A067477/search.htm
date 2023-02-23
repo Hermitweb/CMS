@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/list.css">
+    <!-- 头脚 -->
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/home.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/header.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/footer.css">
+    <!-- swiper -->
+    <script src="{dede:global.cfg_templets_skin/}/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/swiper.min.css">
+    <!-- jq -->
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/header.js"></script>
+    <link rel="shortcut icon" href="{dede:global.cfg_templets_skin/}/images/i/favicon.ico" />
+    <title>{dede:global.cfg_webname/}</title>
+</head>
+
+<body>
+    <!-- headr -->
+
+    {dede:include filename="head.htm"/}
+
+    <!-- headr/ -->
+    
+    <div class="content">
+
+        <div class="left-wrap">
+            <div style="border-bottom: 1px solid #ccc;margin: 20px 0px;">
+                <h1>搜索 <strong style="color:#C6191F">{dede:global name='keyword' function='RemoveXSS(@me)'/}</strong> 的结果
+                </h1>
+            </div>
+            <ul>
+                {dede:list pagesize ='6'}
+                <li>
+                    <div class="img"><a href="[field:arcurl/]"><img src="[field:picname/]" alt="[field:title/]"></a>
+                    </div>
+                    <div class="wenzhang">
+                        <a href="[field:arcurl/]">
+                            <h3>[field:title/]</h3>
+                        </a>
+                        <p><a href="[field:arcurl/]">[field:description function="cn_substr(@me,")/]...</a></p>
+                        <div>
+                            <a href="[field:arcurl/]"><span>[field:typename/]</span></a><i>[field:pubdate function="GetDateMK(@me)"/]</i>
+                        </div>
+                    </div>
+                </li>
+                {/dede:list}
+            </ul>
+            <div class="pages">
+                <!-- {dede:pagelist listitem="" listsize="1"/} -->
+                {dede:pagelist listitem="" listsize="6"/}
+            </div>
+        </div>
+
+        <!-- left-wrap -->
+        {dede:include filename="article_list.htm"/}
+        <!-- left-wrap /-->
+
+    </div>
+    <!-- headr -->
+    {dede:include filename="footer.htm"/}
+    <!-- headr/ -->
+</body>
+<script>
+    var title = new Swiper('.title', {
+        autoplay: {
+
+            delay: 1500, //1秒切换一次
+            disableOnInteraction: false,
+        },
+        direction: 'vertical',
+        loop: true,
+    })
+</script>
+
+</html>

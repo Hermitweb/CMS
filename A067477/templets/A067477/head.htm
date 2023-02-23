@@ -1,0 +1,24 @@
+<div class="header">
+    <div class="title-flex">
+        <div class="title">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"> <img src="{dede:global.cfg_templets_skin/}/images/title.png" alt=""> </div>
+                <div class="swiper-slide"> <img src="{dede:global.cfg_templets_skin/}/images/title2.png" alt=""> </div>
+            </div>
+        </div>
+        <div class="title-search">
+            <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+                <input name="q" type="text" id="search-keyword"   placeholder="在这里搜索..."  onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" /> <img src="{dede:global.cfg_templets_skin/}/images/search.png" alt="">
+            </form>
+        </div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li> <a href="{dede:global.cfg_indexurl/}" class=" nav-active">首页</a> </li>
+            {dede:channel type ='top' }
+            <li> <a href="[field:typelink/]">[field:typename/]</a> </li>
+            {/dede:channel}
+        </ul>
+    </div>
+
+</div>

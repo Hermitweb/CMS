@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/boss-list.css">
+    <!-- 头脚 -->
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/home.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/header.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/footer.css">
+    <!-- swiper -->
+    <script src="{dede:global.cfg_templets_skin/}/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/swiper.min.css">
+    <!-- jq -->
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/header.js"></script>
+    <link rel="shortcut icon" href="{dede:global.cfg_templets_skin/}/images/i/favicon.ico" />
+    <title>{dede:global.cfg_webname/}</title>
+    <style>
+        .position {
+            width: 1366px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            color: rgb(199, 199, 199) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- headr -->
+
+    {dede:include filename="head.htm"/}
+
+    <!-- headr/ -->
+    <div class="position">{dede:field name='position'/}</div>
+    <div class="content">
+
+        <div class="left-wrap">
+            <ul class="boss-list">
+                {dede:channel}
+
+                <li class="active"><a href="[field:typelink/]">[field:typename/]</a></li>
+                {/dede:channel}
+            </ul>
+            <div class="boss-content">{dede:field.content/}</div>
+        </div>
+
+        <!-- right-wrap -->
+
+        {dede:include filename="article_list.htm"/}
+
+        <!-- right-wrap /-->
+    </div>
+    <!-- headr -->
+    {dede:include filename="footer.htm"/}
+    <!-- headr/ -->
+</body>
+<script>
+    var title = new Swiper('.title', {
+        autoplay: {
+
+            delay: 1500, //1秒切换一次
+            disableOnInteraction: false,
+        },
+        direction: 'vertical',
+        loop: true,
+    })
+</script>
+
+</html>

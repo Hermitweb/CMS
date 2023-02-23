@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/tu-list.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/home.css">
+    <!-- 头脚 -->
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/header.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/footer.css">
+    <!-- swiper -->
+    <script src="{dede:global.cfg_templets_skin/}/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/swiper.min.css">
+    <!-- jq -->
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/header.js"></script>
+    <link rel="shortcut icon" href="{dede:global.cfg_templets_skin/}/images/i/favicon.ico" />
+
+    <title>{dede:field.typename/} </title>
+    <style>
+        .position {
+            width: 1366px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            color: rgb(199, 199, 199) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    {dede:include filename="head.htm"/}
+    <!-- /header -->
+    <!-- <div id="container"> -->
+        <div class="tulist">
+            <!-- 当前位置： -->
+            <div class="position">{dede:field name='position'/}</div>
+            {dede:type  typeid='10'}
+            <div class="list-top">
+                <a href="[field:typelink /]">[field:typename /]</a>
+            </div>
+            {/dede:type}
+            <div class="list-tu">
+            
+                {dede:arclist row='1 ' idlist='77' }
+                <div class="left">
+                    
+                    <a href="[field:arcurl/]"><img src="[field:picname/]" alt=""></a>
+                    <a href="[field:arcurl/]" class="active"><span>[field:title/]</span></a>
+                </div>
+                {/dede:arclist}
+                <div class="right">
+                    <ul>
+                        {dede:arclist row='4' typeid='10' orderby ='id' }
+                        <li>
+                            <a href="[field:arcurl/]"><img src="[field:picname/]" alt=""></a>
+                            <a href="[field:arcurl/]" class="active"><span>[field:title/]</span></a>
+                        </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+            <div class="list-top">
+                <a href="#">热门视频</a>
+            </div>
+            <div class="list-tu list-tu-two">
+                <ul>
+                    {dede:arclist row='4 ' imgwidth='273.19' timgheight='200'   flag='c' }
+                    <li>
+                        <a href="[field:arcurl/]"><img src="[field:picname/]" alt=""></a>
+                        <p><a href="[field:arcurl/]">[field:title/]</a></p>
+                    </li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+            <div class="list-top">
+                <a href="#">历史纪实</a>
+            </div>
+            <div class="list-tu list-tu-two">
+                <ul>
+                    {dede:arclist row='4 ' imgwidth='273.19' timgheight='200'   orderby ='click' }
+                    <li>
+                        <a href="[field:arcurl/]"><img src="[field:picname/]" alt=""></a>
+                        <p><a href="[field:arcurl/]">[field:title/]</a></p>
+                    </li>
+                    {/dede:arclist}
+                   
+                </ul>
+            </div>
+        </div>
+    <!-- </div> -->
+    {dede:include filename="footer.htm"/}
+</body>
+
+</html>
+
+<script>
+    var title = new Swiper('.title', {
+        autoplay: {
+
+            delay: 1500, //1秒切换一次
+            disableOnInteraction: false,
+        },
+        direction: 'vertical',
+        loop: true,
+    })
+</script>

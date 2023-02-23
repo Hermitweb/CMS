@@ -1,0 +1,373 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/jieshao.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/swiper.min.css"> -->
+        <!-- 头脚 -->
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/home.css">
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/header.css">
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/footer.css">
+        <!-- swiper -->
+        <script src="{dede:global.cfg_templets_skin/}/js/swiper.min.js"></script>
+        <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/swiper.min.css">
+        <!-- jq -->
+        <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+        <script src="{dede:global.cfg_templets_skin/}/js/header.js"></script>
+        <link rel="shortcut icon" href="{dede:global.cfg_templets_skin/}/images/i/favicon.ico" />
+        <title>{dede:global.cfg_webname/}</title>
+</head>
+
+<body>
+
+    {dede:include filename="head.htm"/}
+    <div class="beijing1">
+
+        <!-- 搜索栏 -->
+        <div class="neir">
+            <div class="neir1">
+                <div class="neir1-a1">
+                    <h1>习近平</h1>
+                    <p>系列重要讲话数据库</p>
+                </div>
+                <div class="neir1-a2">
+                    <img src="{dede:global.cfg_templets_skin/}/images/01.png" alt="">
+                </div>
+            </div>
+            <div class="neir2">
+                <form action="#">
+                    <div class="form-left">
+                        <select name="">
+                            <option value="0" selected>全部</option>
+                            <option value="1">新闻</option>
+                        </select>
+                        <input type="text" placeholder="请输入您要查询的信息">
+                    </div>
+                    <button>
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/cha.png" alt="">
+                        <span>搜索</span>
+                    </button>
+                </form>
+                <div class="frnl">
+                    <div class="search-group"><label for="sou"><input   type="radio" id="sou" name="sou" checked="checked">&nbsp;精确搜索   </label> </div>
+                    <div class="search-group">  <label for="sou2"> <input type="radio" id="sou2" name="sou" checked="checked">&nbsp;语义搜索</label></div>
+                </div>
+            </div>
+        </div>
+        <!-- //搜索栏 -->
+
+        <!-- 图标 -->
+        <div class="tu" id="tu" >
+            <div class="tubiao">
+                <a href="#">
+                    <div class="tubiao-top">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/01.png" alt="">
+                        <span>讲话</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="tubiao-bottom">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/011.png" alt="">
+                        <p>经济</p>
+                    </div>
+                </a>
+            </div>
+            <div class="tubiao">
+                <a href="#">
+                    <div class="tubiao-top">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/02.png" alt="">
+                        <span>会议</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="tubiao-bottom">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/022.png" alt="">
+                        <p>政治</p>
+                    </div>
+                </a>
+            </div>
+            <div class="tubiao">
+                <a href="#">
+                    <div class="tubiao-top">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/03.png" alt="">
+                        <span>活动</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="tubiao-bottom">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/033.png" alt="">
+                        <p>文化</p>
+                    </div>
+                </a>
+            </div>
+            <div class="tubiao">
+                <a href="#">
+                    <div class="tubiao-top">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/04.png" alt="">
+                        <span>考察</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="tubiao-bottom">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/044.png" alt="">
+                        <p>社会</p>
+                    </div>
+                </a>
+            </div>
+            <div class="tubiao">
+                <a href="#">
+                    <div class="tubiao-top">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/05.png" alt="">
+                        <span>会见</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="tubiao-bottom">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/055.png" alt="">
+                        <p>生态</p>
+                    </div>
+                </a>
+            </div>
+            <div class="tubiao">
+                <a href="#">
+                    <div class="tubiao-top">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/06.png" alt="">
+                        <span>出访</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="tubiao-bottom">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/066.png" alt="">
+                        <p>党建</p>
+                    </div>
+                </a>
+            </div>
+            <div class="tubiao">
+                <a href="#">
+                    <div class="tubiao-top">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/07.png" alt="">
+                        <span>函电</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="tubiao-bottom">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/077.png" alt="">
+                        <p>国防</p>
+                    </div>
+                </a>
+            </div>
+            <div class="tubiao">
+                <a href="#">
+                    <div class="tubiao-top">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/08.png" alt="">
+                        <span>其他</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="tubiao-bottom">
+                        <img src="{dede:global.cfg_templets_skin/}/images/i/088.png" alt="">
+                        <p>外交</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- //图标 -->
+        <!-- 新闻 -->
+        <div class="news">
+            <div>
+                <ul class="tabtop2">
+                    <li class="rednew"><img src="{dede:global.cfg_templets_skin/}/images/i/xing.png" alt="">最新</li>
+                    <li><img src="{dede:global.cfg_templets_skin/}/images/i/nei.png" alt="">国内</li>
+                    <li><img src="{dede:global.cfg_templets_skin/}/images/i/wai.png" alt="">国际</li>
+                    <li><img src="{dede:global.cfg_templets_skin/}/images/i/gao.png" alt="">通知公告</li>
+
+                </ul>
+                <ul class="tabbody2">
+                    <li style="display: block;">
+                        {dede:arclist row='10' typeid="11"}
+                        <a href="[field:arcurl/]"><span>[field:fulltitle/]</span><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></a>
+                        {/dede:arclist}
+                    </li>
+                    <li>
+                        {dede:arclist row='10' typeid="12"}
+                        <a href="[field:arcurl/]"><span>[field:fulltitle/]</span><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></a>
+                        {/dede:arclist}
+                    </li>
+                    <li>
+                        {dede:arclist row='10' typeid="13"}
+                        <a href="[field:arcurl/]"><span>[field:fulltitle/]</span><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></a>
+                        {/dede:arclist}
+                    </li>
+                    <li>
+                        {dede:arclist row='10' typeid="14"}
+                        <a href="[field:arcurl/]"><span>[field:fulltitle/]</span><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></a>
+                        {/dede:arclist}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- /* 图集 */ -->
+    <div class="beijing2">
+
+        <div class="beijing2-flex">
+            <ul class="f1">
+                <li class="rednew1">图集</li>
+                <li>视频</li>
+                <li>原音</li>
+            </ul>
+            <ul class="f2">
+                <li class="f2-a">
+                    <ul class="f2-l">
+                        {dede:arclist row='3' typeid="12"   flag='c'  orderby ='pubdate' }
+                        <li class="f2-tu1">
+                            <a href="[field:arcurl/]"><img src="[field:picname/]" alt=""></a>
+                        </li>
+                        {/dede:arclist}
+                    </ul>
+                    <ul class="f2-tu2-l">
+                        {dede:arclist row='3' typeid="12"   flag='c'  orderby ='pubdate' }
+                        <li>
+                            <a href="[field:arcurl/]">
+                                <img src="[field:picname/]" alt="">
+                                <span>[field:title/]</span>
+                            </a>
+                        </li>
+                        {/dede:arclist}
+                    </ul>
+                </li>
+                <li hidden class="f2-b">
+                    {dede:arclist row='7' typeid="12" }
+                        <a href="[field:arcurl/]"><span>[field:fulltitle/]</span><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></a>
+                        {/dede:arclist}
+                </li>
+                <li hidden class="f2-b">
+                    {dede:arclist row='7' typeid="13" }
+                    <a href="[field:arcurl/]"><span>[field:fulltitle/]</span><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></a>
+                    {/dede:arclist}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- bj -->
+    <div class="beijing3">
+        <div class="bj">
+            <span>我们党作出实行改革开放的历史性决策，<br> 是基于对党和国家前途命运的深刻把握，<br> 是基于对社会主义革命和建设实践的深刻总结，<br> 是基于对时代潮流的深刻洞察，<br>
+                是基于对人民群众期盼和需要的深刻体悟。</span>
+        </div>
+        <div class="rigth">
+            <h3>|专题资料库</h3>
+            <div class="righth-a">
+                <div class="righth-img">
+                    <img src="{dede:global.cfg_templets_skin/}/images/r1.jpg" alt="">
+                    <p>求是专栏</p>
+                </div>
+                <div class="righth-img">
+                    <img src="{dede:global.cfg_templets_skin/}/images/r1.jpg" alt="">
+                    <p>求是专栏</p>
+                </div>
+                <div class="righth-img">
+                    <img src="{dede:global.cfg_templets_skin/}/images/r1.png" alt="">
+                    <p>时习之</p>
+                </div>
+            </div>
+            <ul class="righth-b">
+                <li><a href="#"> 党史学习教育</a></li>
+                <li><a href="#">乡村振兴</a></li>
+                <li><a href="#">红船精神</a></li>
+                <li><a href="#">十九届五中全会</a></li>
+                <li><a href="#">不忘初心、牢记使命</a></li>
+                <li><a href="#">疫情防控</a></li>
+                <li><a href="#">全面建成小康社会</a></li>
+                <li><a href="#">疫情防控</a></li>
+                <li><a href="#">十九大报告</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="beijing4">
+        <h2>|学习书库</h2>
+        <ul class="xx swiper-container" id="sw2">
+            <div class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a href="#"><img src="{dede:global.cfg_templets_skin/}/images/x1.png" alt=""></a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#"><img src="{dede:global.cfg_templets_skin/}/images/x2.png" alt=""></a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#"><img src="{dede:global.cfg_templets_skin/}/images/x3.png" alt=""></a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#"><img src="{dede:global.cfg_templets_skin/}/images/x4.png" alt=""></a>
+                </li>
+            </div>
+
+        </ul>
+        <div class="xx1">
+            <img src="{dede:global.cfg_templets_skin/}/images/bookshelf.png" alt="">
+        </div>
+    </div>
+    {dede:include filename="footer.htm"/}
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script>
+    $(function () {
+        $(".tabtop2 li").mouseover(function () {
+            $(this).addClass("rednew").siblings().removeClass("rednew");
+
+            var xiabiao2 = $(this).index();
+            $(".tabbody2 li").eq(xiabiao2).show().siblings().hide();
+        })
+
+        /* 图集 */
+        $(".f1 li").mouseover(function () {
+            $(this).addClass("rednew1").siblings().removeClass("rednew1");
+
+            var xiabiao3 = $(this).index();
+            $(".f2>li").eq(xiabiao3).show().siblings().hide();
+        })
+
+        $(".f2-tu2-l li").mouseover(function () {
+            // $(this).addClass("rednew2").siblings().removeClass("rednew2");
+
+            var xiabiao4 = $(this).index();
+            $(".f2-l li").eq(xiabiao4).show().siblings().hide();
+        })
+
+
+        var title = new Swiper('.title', {
+        autoplay: {
+
+            delay: 1500, //1秒切换一次
+            disableOnInteraction: false,
+        },
+        direction: 'vertical',
+        loop: true,
+    })
+
+        //   111
+        var s2 = new Swiper("#sw2", {
+            slidesPerView: 4, //一屏几张图
+            spaceBetween: 50, //图间间距
+            loop: true,
+            autoplay: {
+                delay: 700,
+                disableOnInteraction: false //1秒切换一次
+            },
+            // coverflowEffect: {
+            //     rotate: 30,
+            //     stretch: 10,
+            //     depth: 60,
+            //     modifier: 2,
+            //     slideShadows: true
+            // }
+        });
+    })
+</script>
+
+</html>

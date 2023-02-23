@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/content.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/home.css">
+    <!-- 头脚 -->
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/header.css">
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/footer.css">
+    <!-- swiper -->
+    <script src="{dede:global.cfg_templets_skin/}/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/swiper.min.css">
+    <!-- jq -->
+    <script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+    <script src="{dede:global.cfg_templets_skin/}/js/header.js"></script>
+
+    <link rel="shortcut icon" href="{dede:global.cfg_templets_skin/}/images/i/favicon.ico" />
+    <title>{dede:field.title/} </title>
+    <style>
+        .position {
+            width: 1366px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            color: rgb(199, 199, 199) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- headr -->
+
+    {dede:include filename="head.htm"/}
+
+    <!-- headr/ -->
+
+    <!-- 当前位置：  -->
+    <div class="position">{dede:field name='position'/}</div>
+    <div class="arctile-box">
+        
+        <div class="arctile-header">
+            <h1>{dede:field.title/}</h1>
+            <p><span>{dede:field.pubdate function="MyDate('Y-m-d
+                    H:i',@me)"/}</span>&nbsp;&nbsp;&nbsp;&nbsp;来源:{dede:field.source/}&nbsp;&nbsp;作者：
+                {dede:field.writer/}</p> 
+        </div>
+        
+        <div class="arctile-kg"></div>
+    </div>
+
+    <div class="content">
+
+        <div class="left-wrap">
+
+            <p>{dede:field.body/}</p>
+            <p>{dede:prenext get='pre'/}
+            </p>
+            <p> {dede:prenext get='next'/}</p>
+        </div>
+
+        {dede:include filename="article_list.htm"/}
+    </div>
+    <!-- headr -->
+    {dede:include filename="footer.htm"/}
+    <!-- headr/ -->
+</body>
+
+</html>
+
+<script>
+    var title = new Swiper('.title', {
+        autoplay: {
+
+            delay: 1500, //1秒切换一次
+            disableOnInteraction: false,
+        },
+        direction: 'vertical',
+        loop: true,
+    })
+</script>

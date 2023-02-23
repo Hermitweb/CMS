@@ -1,0 +1,70 @@
+<div class="right-wrap">
+    <div class="right-one">
+        <a href="#"><img src="{dede:global.cfg_templets_skin/}/images/listtu2.png" alt=""></a>
+        <a href="#"><img src="{dede:global.cfg_templets_skin/}/images/listtu3.png" alt=""></a>
+    </div>
+    <div class="right-two">
+        <div>
+            <h3><a href="#">重点推荐</a></h3>
+        </div>
+        <div class="two-list">
+            <div>
+                <p><a href="#">重要文章</a></p>
+                <ul>
+                    {dede:arclist   row='4'  typeid='4'   titlelen='100'}
+                    <li class="two-list-a"><a href="[field:arcurl/]"> [field:title/]</a></li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+            <div>
+                <p><a href="#">学者专栏</a></p>
+                <ul>
+                    {dede:arclist   row='4'  typeid='5'   titlelen='100'}
+                    <li class="two-list-a"><a href="[field:arcurl/]"> [field:title/]</a></li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+            <div>
+                <p><a href="#">书籍杂志</a></p>
+                <a href="#"><img src="{dede:global.cfg_templets_skin/}/images/listtu3.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="right-two two-viode">
+        <div>
+            <h3><a href="#">视频推荐</a></h3>
+        </div>
+
+        {dede:arclist idlist='74' titlelen='200'}
+        <div>
+            <a href="[field:arcurl/]"><img src="[field:picname/]" alt=""></a>
+            <a href="[field:arcurl/]"><img src="/A067477/templets/a067477/images/listtu5.png" alt="" class="tu-png"></a>
+        </div>
+        <p>[field:title/] </p>
+        {/dede:arclist}
+
+
+    </div>
+    <div class="right-two">
+        <div>
+            <h3><a href="#">热门网评</a></h3>
+        </div>
+        <div class="two-list">
+            <div>
+                <ul>
+                    {dede:arclist row='4'   titlelen='100'  orderby ='click'}
+                    <li><a href="[field:arcurl/]">[field:title/]</a></li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="right-two two-last">
+       <!--  <div>
+            <h3><a href="#">热门</a></h3> 
+        </div>-->
+        <a href="#"><img src="{dede:global.cfg_templets_skin/}/images/jzg.jpg" alt=""></a>
+        <!-- <p>弘扬英雄精神，汇聚磅礴力量</p>
+        <p>作者：蒋经深</p> -->
+    </div>
+</div>
